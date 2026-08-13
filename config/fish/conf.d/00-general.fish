@@ -36,6 +36,13 @@ set -gx nvm_default_version lts
 # Starship
 starship init fish | source
 
+# thefuck
+thefuck --alias fk | source
+
+# zoxide
+zoxide init fish | source
+alias cd z
+
 # Qt
 set -gx QT_QPA_PLATFORMTHEME qt6ct
 
