@@ -29,26 +29,14 @@ return {
   {
     "AvengeMedia/base46",
     lazy = true,
-    opts = {},
+    opts = {
+      transparency = true,
+    },
   },
   {
     "LazyVim/LazyVim",
     opts = {
       colorscheme = "dms",
     },
-  },
-  {
-    "xiyaowong/transparent.nvim",
-    opts = {
-      extra_groups = {
-        "NormalFloat",
-        "FloatBorder",
-      },
-    },
-    config = function(_, opts)
-      require("transparent").setup(opts)
-      require("transparent").clear_prefix("gitsigns")
-      vim.cmd("TransparentEnable")
-    end,
   },
 }
