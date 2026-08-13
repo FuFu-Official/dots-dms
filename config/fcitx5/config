@@ -1,15 +1,20 @@
 [Hotkey]
-EnumerateWithTriggerKeys=False
+EnumerateWithTriggerKeys=True
 EnumerateForwardKeys=
 EnumerateBackwardKeys=
 EnumerateSkipFirst=False
 ModifierOnlyKeyTimeout=250
 
 [Hotkey/TriggerKeys]
+0=Super+space
+1=Zenkaku_Hankaku
+2=Hangul
 
 [Hotkey/ActivateKeys]
+0=Hangul_Hanja
 
 [Hotkey/DeactivateKeys]
+0=Hangul_Romaja
 
 [Hotkey/AltTriggerKeys]
 0=Shift_L
@@ -18,20 +23,22 @@ ModifierOnlyKeyTimeout=250
 0=Super+space
 
 [Hotkey/EnumerateGroupBackwardKeys]
+0=Shift+Super+space
 
 [Hotkey/PrevPage]
-0=Left
-
-[Hotkey/NextPage]
-0=Right
-
-[Hotkey/PrevCandidate]
 0=Up
 
-[Hotkey/NextCandidate]
+[Hotkey/NextPage]
 0=Down
 
+[Hotkey/PrevCandidate]
+0=Shift+Tab
+
+[Hotkey/NextCandidate]
+0=Tab
+
 [Hotkey/TogglePreedit]
+0=Control+Alt+P
 
 [Behavior]
 ActiveByDefault=False
