@@ -1,5 +1,18 @@
 return {
   {
+    "mason-org/mason.nvim",
+    -- Add mason bin to Neovim PATH
+    init = function()
+      local mason_bin = vim.fn.stdpath("data") .. "/mason/bin"
+      if not vim.env.PATH:find(mason_bin, 1, true) then
+        vim.env.PATH = mason_bin .. ":" .. vim.env.PATH
+      end
+    end,
+    opts = {
+      PATH = "prepend",
+    },
+  },
+  {
     "neovim/nvim-lspconfig",
     ---@class PluginLspOpts
     opts = {
