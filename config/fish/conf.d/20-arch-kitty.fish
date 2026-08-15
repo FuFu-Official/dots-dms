@@ -8,28 +8,14 @@ end
 
 # Arch Linux specific aliases
 if test "$OS_ID" = arch
-
-    set -gx HYPRSHOT_DIR $HOME/Pictures/Screenshots
-
     # Pacman
-    alias p pacman
-    alias sps "sudo pacman -S"
-    alias spu "sudo pacman -Syu"
-    alias spr "sudo pacman -Rns"
+    abbr p "sudo pacman"
 
     # AUR
     if type -q yay
-        alias g yay
-        alias gu "yay -Syu"
-        alias gs "yay -S"
-        alias gr "yay -Rns"
+        abbr g yay
     else if type -q paru
-        alias g paru
-        alias gu "paru -Syu"
-        alias gs "paru -S"
-        alias gr "paru -Rns"
-    else
-        echo "No AUR helper found (paru or yay)"
+        abbr g paru
     end
 end
 
@@ -39,4 +25,3 @@ if test "$TERM" = xterm-kitty
         kitty +kitten ssh $argv
     end
 end
-

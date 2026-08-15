@@ -23,8 +23,9 @@ else
     set -g IS_DISTROBOX 0
 end
 
-# Rust
-set -px PATH /home/fufu/.cargo/bin
+# PATH
+fish_add_path ~/.local/bin
+fish_add_path /home/fufu/.cargo/bin
 
 # Set Proxy for GO Dependency
 set -Ux GOPROXY https://goproxy.cn,direct

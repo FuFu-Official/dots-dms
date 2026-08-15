@@ -2,3 +2,4 @@
 # VERSION: 3.0
 SETUVAR --export GOPROXY:https\x3a//goproxy\x2ecn\x2cdirect
 SETUVAR _fisher_upgraded_to_4_4:\x1d
+SETUVAR fish_user_paths:/home/fufu/\x2elocal/bin

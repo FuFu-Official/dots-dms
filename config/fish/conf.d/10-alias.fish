@@ -234,3 +234,6 @@ end
 
 # Git flow
 alias gfm "gf -m"
+
+# Shorin
+abbr grub 'LANGUAGE=en_US.UTF-8 LANG=en_US.UTF-8 sudo grub-mkconfig -o /boot/grub/grub.cfg'
