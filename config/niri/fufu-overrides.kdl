@@ -29,6 +29,18 @@ binds {
     Mod+Shift+Alt+P hotkey-overlay-title="Toggle Touchpad" {
         spawn-sh "~/.config/niri/scripts/toggle-touchpad.sh";
     }
+
+    Mod+W hotkey-overlay-title="浏览器 Browser" { spawn "firefox"; }        
+
+    Mod+Alt+1 { move-column-to-workspace 1; }
+    Mod+Alt+2 { move-column-to-workspace 2; }
+    Mod+Alt+3 { move-column-to-workspace 3; }
+    Mod+Alt+4 { move-column-to-workspace 4; }
+    Mod+Alt+5 { move-column-to-workspace 5; }
+    Mod+Alt+6 { move-column-to-workspace 6; }
+    Mod+Alt+7 { move-column-to-workspace 7; }
+    Mod+Alt+8 { move-column-to-workspace 8; }
+    Mod+Alt+9 { move-column-to-workspace 9; }
 }
 
 include optional=true "touchpad-toggle.kdl"

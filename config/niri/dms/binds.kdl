@@ -93,8 +93,8 @@ binds {
     Mod+Ctrl+A  { move-column-left; }
     Mod+Ctrl+D { move-column-right; }
     // mod+S/W 上下切换窗口
-    Mod+S { move-window-down; }
-    Mod+W { move-window-up; }
+    // Mod+S { move-window-down; }
+    // Mod+W { move-window-up; }
     
     // 切换到第一个column
     Mod+Home { focus-column-first; }
