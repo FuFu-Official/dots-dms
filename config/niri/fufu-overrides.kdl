@@ -1,6 +1,6 @@
 environment {
-    LANGUAGE "en_US:en"                                          
-    LANG "en_US.UTF-8"                                           
+    LANGUAGE "en_US:en"
+    LANG "en_US.UTF-8"
     // 输入法环境变量
     XMODIFIERS "@im=fcitx"
     QT_IM_MODULES "wayland;fcitx"
@@ -14,3 +14,21 @@ environment {
     // 默认文本编辑器
     EDITOR "nvim"
 }
+
+input {
+    touchpad {
+        tap
+        natural-scroll
+        dwt
+    }
+}
+
+binds {
+    XF86TouchpadToggle { spawn-sh "~/.config/niri/scripts/toggle-touchpad.sh"; }
+
+    Mod+Shift+Alt+P hotkey-overlay-title="Toggle Touchpad" {
+        spawn-sh "~/.config/niri/scripts/toggle-touchpad.sh";
+    }
+}
+
+include optional=true "touchpad-toggle.kdl"
