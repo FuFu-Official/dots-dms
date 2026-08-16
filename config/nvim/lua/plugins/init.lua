@@ -15,5 +15,5 @@ return {
   { import = "plugins.ui.themes" },
 
   -- https://github.com/mikesmithgh/kitty-scrollback.nvim
-  -- { import = "plugins.utils.kitty" },
+  { import = "plugins.util.kitty" },
 }
