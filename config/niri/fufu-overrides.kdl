@@ -41,6 +41,9 @@ binds {
     Mod+Alt+7 { move-column-to-workspace 7; }
     Mod+Alt+8 { move-column-to-workspace 8; }
     Mod+Alt+9 { move-column-to-workspace 9; }
+
+    Ctrl+Alt+Up { spawn "dms" "ipc" "call" "audio" "increment" "3"; }
+    Ctrl+Alt+Down { spawn "dms" "ipc" "call" "audio" "decrement" "3"; }
 }
 
 include optional=true "touchpad-toggle.kdl"
