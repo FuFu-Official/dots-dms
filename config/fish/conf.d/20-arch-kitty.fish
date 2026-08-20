@@ -17,6 +17,25 @@ if test "$OS_ID" = arch
     else if type -q paru
         abbr g paru
     end
+
+    function asus_lights
+        if not type -q asusctl
+            echo "asusctl not found, skipping"
+            return 1
+        end
+
+        asusctl leds set $argv[1]
+        asusctl slash --$argv[2]
+    end
+
+    function asus_lights_off
+        asus_lights off disable
+    end
+
+    function asus_lights_on
+        asus_lights high enable
+    end
+
 end
 
 # Kitty specific settings
