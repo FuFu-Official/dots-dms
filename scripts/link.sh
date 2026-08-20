@@ -23,5 +23,8 @@ ln -s "$DOTS_PREFIX/config/niri" "$HOME/.config/niri"
 rm -rf "$HOME/.config/zathura"
 ln -s "$DOTS_PREFIX/config/zathura" "$HOME/.config/zathura"
 
+rm -rf "$HOME/.config/DankMaterialShell"
+ln -s "$DOTS_PREFIX/config/DankMaterialShell" "$HOME/.config/DankMaterialShell"
+
 rm -rf "$HOME/.config/starship.toml"
 ln -s "$DOTS_PREFIX/config/starship.toml" "$HOME/.config/starship.toml"
