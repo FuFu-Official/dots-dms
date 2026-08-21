@@ -12,3 +12,9 @@ window-rule {
     match app-id="^Feishu$"
     open-maximized true
 }
+
+// @id=wr_1786980695461001130 @name=zen
+window-rule {
+    match app-id="^zen$"
+    open-maximized true
+}
