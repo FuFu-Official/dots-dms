@@ -26,5 +26,8 @@ ln -s "$DOTS_PREFIX/config/zathura" "$HOME/.config/zathura"
 rm -rf "$HOME/.config/DankMaterialShell"
 ln -s "$DOTS_PREFIX/config/DankMaterialShell" "$HOME/.config/DankMaterialShell"
 
+rm -rf "$HOME/.config/opencode/instructions/"
+ln -s "$DOTS_PREFIX/config/opencode/instructions" "$HOME/.config/opencode/instructions"
+
 rm -rf "$HOME/.config/starship.toml"
 ln -s "$DOTS_PREFIX/config/starship.toml" "$HOME/.config/starship.toml"

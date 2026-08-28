@@ -1,0 +1,12 @@
+{
+  "dankPomodoroTimer": {
+    "enabled": true,
+    "workDuration": "45",
+    "autoSetDND": false,
+    "shortBreakDuration": "15",
+    "longBreakDuration": "25"
+  },
+  "dankKDEConnect": {
+    "enabled": true
+  }
+}

@@ -13,6 +13,9 @@ proxy traffic may cost money.
   the whole shell session.
 - Keep local addresses and package registries that work directly off the
   proxy.
+- For `webfetch`, `websearch`, package managers, and other external network
+  operations, consider retrying with the proxy when the direct attempt fails,
+  times out, or is clearly blocked.
 - Never put proxy URLs, tokens, or command output containing credentials into
   files, commits, or the response.
 - Do not assume that a failed request means the service is unavailable. Retry
@@ -47,11 +50,12 @@ no_proxy=localhost,127.0.0.1,192.168.0.0/16,10.0.0.0/8,172.16.0.0/12 \
 
 ## Procedure
 
-1. Run the requested network command without a proxy.
-2. If it fails because of timeout or connectivity, check whether the local
-   proxy is listening on ports `7892` or `7890`.
-3. Retry the command with the proxy environment variables above, preferably
-   scoped to that command.
+1. Run the requested network operation without a proxy. This includes
+   `webfetch`, `websearch`, package-manager commands, and similar tools.
+2. If it fails because of timeout, connectivity, or blocking, check whether the
+   local proxy is listening on ports `7892` or `7890`.
+3. Retry the same operation with the proxy environment variables above when
+   the tool supports them, preferably scoped to that operation.
 4. If the proxy endpoint is unavailable, inspect the local Clash-Party
    configuration or test another configured local port. Do not invent remote
    proxies.

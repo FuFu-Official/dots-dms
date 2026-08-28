@@ -51,10 +51,10 @@ return {
         return require("opencode").operator("@this ") .. "_"
       end, { desc = "Append line to OpenCode", expr = true })
 
-      vim.keymap.set("n", "<leader>ak", function()
+      vim.keymap.set("n", "<C-S-k>", function()
         require("opencode").command("session.half.page.up")
       end, { desc = "Scroll OpenCode up" })
-      vim.keymap.set("n", "<leader>aj", function()
+      vim.keymap.set("n", "<C-S-j>", function()
         require("opencode").command("session.half.page.down")
       end, { desc = "Scroll OpenCode down" })
 

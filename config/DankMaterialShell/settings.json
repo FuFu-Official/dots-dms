@@ -32,7 +32,7 @@
   "firstDayOfWeek": -1,
   "showWeekNumber": false,
   "calendarBackend": "auto",
-  "clockFormat": "auto",
+  "clockFormat": "24h",
   "showSeconds": false,
   "padHours12Hour": false,
   "useFahrenheit": false,
@@ -459,7 +459,7 @@
   "dockGroupByApp": false,
   "dockRestoreSpecialWorkspaceOnClick": false,
   "dockOpenOnOverview": false,
-  "dockPosition": 1,
+  "dockPosition": 2,
   "dockSpacing": 4,
   "dockBottomGap": 0,
   "dockMargin": 0,
@@ -586,7 +586,7 @@
       "id": "default",
       "name": "Main Bar",
       "enabled": true,
-      "position": 0,
+      "position": 1,
       "screenPreferences": [
         "all"
       ],
@@ -597,9 +597,9 @@
         "focusedWindow"
       ],
       "centerWidgets": [
-        "music",
         "clock",
-        "weather"
+        "weather",
+        "music"
       ],
       "rightWidgets": [
         {
@@ -610,6 +610,10 @@
           "id": "idleInhibitor",
           "enabled": true
         },
+        {
+          "id": "dankPomodoroTimer",
+          "enabled": true
+        },
         "systemTray",
         "clipboard",
         "cpuUsage",
@@ -618,12 +622,12 @@
         "battery",
         "controlCenterButton"
       ],
-      "spacing": 1,
+      "spacing": 0,
       "innerPadding": -3,
       "bottomGap": -7,
       "transparency": 1,
       "widgetTransparency": 1,
-      "squareCorners": false,
+      "squareCorners": true,
       "noBackground": false,
       "gothCornersEnabled": false,
       "gothCornerRadiusOverride": false,
@@ -641,7 +645,9 @@
       "popupGapsManual": 4,
       "maximizeWidgetIcons": false,
       "shadowIntensity": 0,
-      "widgetPadding": 8
+      "widgetPadding": 8,
+      "removeWidgetPadding": false,
+      "widgetOutlineEnabled": false
     }
   ],
   "desktopClockEnabled": false,

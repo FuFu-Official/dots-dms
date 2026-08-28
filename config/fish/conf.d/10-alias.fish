@@ -6,20 +6,20 @@ alias ..... "cd ../../../.."
 alias x clear
 
 if type -q eza
-    alias ls 'eza --icons --hyperlink'
-    alias ll 'eza -l --icons --git --hyperlink'
-    alias la 'eza -la --icons --git --hyperlink'
-    alias lh 'eza -lah --icons --git --hyperlink'
-    alias ld 'eza -l --icons --only-dirs --hyperlink'
+    alias ls 'eza --icons --hyperlink=auto'
+    alias ll 'eza -l --icons --git --hyperlink=auto'
+    alias la 'eza -la --icons --git --hyperlink=auto'
+    alias lh 'eza -lah --icons --git --hyperlink=auto'
+    alias ld 'eza -l --icons --only-dirs --hyperlink=auto'
     function lt
-        eza --tree --level=$argv --icons --hyperlink
+        eza --tree --level=$argv --icons --hyperlink=auto
     end
-    alias ltt 'eza --tree --level=2 --icons --hyperlink'
-    alias lg 'eza -la --icons --git --git-ignore --hyperlink'
-    alias lsize 'eza -lah --sort=size --hyperlink'
-    alias ltime 'eza -lah --sort=modified --hyperlink'
+    alias ltt 'eza --tree --level=2 --icons --hyperlink=auto'
+    alias lg 'eza -la --icons --git --git-ignore --hyperlink=auto'
+    alias lsize 'eza -lah --sort=size --hyperlink=auto'
+    alias ltime 'eza -lah --sort=modified --hyperlink=auto'
 else
-    alias ls 'ls --hyperlink --color=auto'
+    alias ls 'ls --hyperlink=auto --color=auto'
     alias ll 'ls -lh'
     alias la 'ls -lah'
 end
