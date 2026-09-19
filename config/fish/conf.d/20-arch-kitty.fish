@@ -25,7 +25,7 @@ if test "$OS_ID" = arch
         end
 
         asusctl leds set $argv[1]
-        asusctl slash --$argv[2]
+        asusctl slash set --$argv[2]
     end
 
     function asus_lights_off

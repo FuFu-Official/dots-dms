@@ -47,3 +47,28 @@ binds {
 }
 
 include optional=true "touchpad-toggle.kdl"
+
+layout {
+    gaps 6
+    struts {
+        bottom 6
+    }
+}
+
+window-rule {
+    geometry-corner-radius 0
+    clip-to-geometry true
+    draw-border-with-background false
+}
+
+output "eDP-1" {
+    mode "2560x1600@240.001"
+    scale 1.5
+    position x=0 y=0
+}
+
+output "HDMI-A-1" {
+    mode "2560x1440@59.951"
+    scale 1.0
+    position x=1707 y=0
+}
