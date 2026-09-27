@@ -1,15 +1,14 @@
-alias .. "cd .."
-alias ... "cd ../.."
-alias .... "cd ../../.."
-alias ..... "cd ../../../.."
+abbr .. "cd .."
+abbr ... "cd ../.."
+abbr .... "cd ../../.."
+abbr ..... "cd ../../../.."
 
 alias x clear
 
 if type -q eza
     alias ls 'eza --icons --hyperlink=auto'
-    alias ll 'eza -l --icons --git --hyperlink=auto'
-    alias la 'eza -la --icons --git --hyperlink=auto'
-    alias lh 'eza -lah --icons --git --hyperlink=auto'
+    alias ll 'eza -lh --icons --git --hyperlink=auto'
+    alias la 'eza -lah --icons --git --hyperlink=auto'
     alias ld 'eza -l --icons --only-dirs --hyperlink=auto'
     function lt
         eza --tree --level=$argv --icons --hyperlink=auto
@@ -32,17 +31,17 @@ alias vi nvim
 alias V nvim
 
 # Git
-alias g git
-alias ga "git add"
-alias gcl "git clone"
-alias gcm "git commit -m"
-alias gst "git status"
-alias gb "git branch"
-alias gba "git branch -a"
-alias gbd "git branch -D"
-alias gcb "git checkout -b"
-alias gph "git push"
-alias gpl "git pull"
+abbr g git
+abbr ga "git add"
+abbr gcl "git clone"
+abbr gcm "git commit -m"
+abbr gst "git status"
+abbr gb "git branch"
+abbr gba "git branch -a"
+abbr gbd "git branch -D"
+abbr gcb "git checkout -b"
+abbr gph "git push"
+abbr gpl "git pull"
 
 # Lazygit
 alias gg lazygit
