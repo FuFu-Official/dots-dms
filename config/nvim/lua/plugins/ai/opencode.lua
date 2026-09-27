@@ -1,7 +1,6 @@
 return {
   {
     "nickjvandyke/opencode.nvim",
-    version = "*", -- Latest stable release
     dependencies = {
       {
         "folke/snacks.nvim",
@@ -25,7 +24,7 @@ return {
             win = {
               input = {
                 keys = {
-                  ["<a-a>"] = { "opencode_send", mode = { "n", "i" } },
+                  ["<a-o>"] = { "opencode_send", mode = { "n", "i" } },
                 },
               },
             },
@@ -34,8 +33,6 @@ return {
       },
     },
     config = function()
-      vim.o.autoread = true -- Required for `vim.g.opencode_opts.events.reload`
-
       -- Recommended/example keymaps
       vim.keymap.set({ "n", "x" }, "<leader>as", function()
         require("opencode").ask("@this: ")
@@ -45,11 +42,11 @@ return {
       end, { desc = "Select OpenCode…" })
 
       vim.keymap.set({ "n", "x" }, "ao", function()
-        return require("opencode").operator("@this ")
-      end, { desc = "Append range to OpenCode", expr = true })
+        return require("opencode").operator("@this")
+      end, { desc = "Send range to OpenCode", expr = true })
       vim.keymap.set("n", "aO", function()
-        return require("opencode").operator("@this ") .. "_"
-      end, { desc = "Append line to OpenCode", expr = true })
+        return require("opencode").operator("@this") .. "_"
+      end, { desc = "Send line to OpenCode", expr = true })
 
       vim.keymap.set("n", "<C-S-k>", function()
         require("opencode").command("session.half.page.up")
@@ -58,7 +55,7 @@ return {
         require("opencode").command("session.half.page.down")
       end, { desc = "Scroll OpenCode down" })
 
-      local opencode_cmd = "opencode --port"
+      local opencode_cmd = "opencode"
       ---@type snacks.terminal.Opts
       local snacks_terminal_opts = {
         win = {
