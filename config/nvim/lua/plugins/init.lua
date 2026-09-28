@@ -1,6 +1,5 @@
 return {
   { import = "plugins.ai.codex" },
-  { import = "plugins.ai.opencode" },
 
   { import = "plugins.core.lint" },
   { import = "plugins.core.lsp" },
