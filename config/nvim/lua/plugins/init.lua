@@ -2,6 +2,7 @@ return {
   { import = "plugins.ai.codex" },
 
   { import = "plugins.core.lint" },
+  { import = "plugins.core.format" },
   { import = "plugins.core.lsp" },
   { import = "plugins.core.treesitter" },
 

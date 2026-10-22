@@ -3,6 +3,8 @@
 -- Change the default root directory
 vim.g.root_spec = { "lsp", "cwd", { ".git", "lua" } }
 
+vim.o.autoread = true
+
 -- Enable OSC 52 clipboard support for SSH connections
 if vim.env.SSH_CONNECTION then
   vim.opt.clipboard = "unnamedplus"

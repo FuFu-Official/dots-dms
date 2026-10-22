@@ -23,14 +23,14 @@ return {
           settings = {
             texlab = {
               build = {
-                executable = "xelatex",
-                args = { "-interaction=nonstopmode", "-synctex=1", "%f" },
+                executable = "latexmk",
+                args = { "-xelatex", "-interaction=nonstopmode", "-synctex=1", "%f" },
                 forwardSearchAfter = true,
-                onSave = true,
+                -- onSave = true,
               },
               forwardSearch = {
-                args = { "--synctex-forward", "%l:1:%f", "%p" },
                 executable = "zathura",
+                args = { "--synctex-forward", "%l:1:%f", "%p" },
               },
             },
           },
