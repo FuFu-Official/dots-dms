@@ -10,7 +10,7 @@ environment {
     // 解决quickshell图标主题缺失问题
     QS_ICON_THEME "Adwaita"
     // GTK软件使用的渲染器，可以解决n卡双显卡导致的GTK应用启动缓慢问题，AMD或Intel单显卡不需要这行设置可以注释掉
-    //GSK_RENDERER "gl"
+    GSK_RENDERER "gl"
     // 默认文本编辑器
     EDITOR "nvim"
 }
@@ -24,26 +24,54 @@ input {
 }
 
 binds {
-    XF86TouchpadToggle { spawn-sh "~/.config/niri/scripts/toggle-touchpad.sh"; }
+    Mod+T hotkey-overlay-title="终端 Terminal Kitty" { spawn "kitty"; }
+    Mod+W hotkey-overlay-title="浏览器 Browser Firefox" { spawn "firefox"; }
+    Mod+E hotkey-overlay-title="文档管理器 Filemanager" { spawn-sh "thunar || env GSK_RENDERER=gl nautilus --new-window"; }
+    Mod+Z hotkey-overlay-title="程序菜单 Applauncher" { spawn-sh "dms ipc call spotlight toggle || fuzzel"; }
 
-    Mod+Shift+Alt+P hotkey-overlay-title="Toggle Touchpad" {
+    Mod+H     { focus-column-left; }
+    Mod+J     { focus-window-down; }
+    Mod+K     { focus-window-up; }
+    Mod+L     { focus-column-right; }
+
+    Mod+1 { focus-workspace 1; }
+    Mod+2 { focus-workspace 2; }
+    Mod+3 { focus-workspace 3; }
+    Mod+4 { focus-workspace 4; }
+    Mod+5 { focus-workspace 5; }
+    Mod+6 { focus-workspace 6; }
+    Mod+7 { focus-workspace 7; }
+    Mod+8 { focus-workspace 8; }
+    Mod+9 { focus-workspace 9; }
+    // Focus last workspace
+    Mod+grave { focus-workspace 255; }
+    Mod+Left { focus-workspace-up; }
+    Mod+Right { focus-workspace-down; }
+
+    Mod+Shift+1 { move-column-to-workspace 1; }
+    Mod+Shift+2 { move-column-to-workspace 2; }
+    Mod+Shift+3 { move-column-to-workspace 3; }
+    Mod+Shift+4 { move-column-to-workspace 4; }
+    Mod+Shift+5 { move-column-to-workspace 5; }
+    Mod+Shift+6 { move-column-to-workspace 6; }
+    Mod+Shift+7 { move-column-to-workspace 7; }
+    Mod+Shift+8 { move-column-to-workspace 8; }
+    Mod+Shift+9 { move-column-to-workspace 9; }
+    // Move window to last workspace
+    Mod+Shift+grave { move-window-to-workspace 255; }
+    // 移动窗口到上一个 / 下一个工作区，并跟随切换
+    Mod+Shift+Left { move-window-to-workspace-up; }
+    Mod+Shift+Right { move-window-to-workspace-down; }
+
+    Mod+Shift+H hotkey-overlay-title="向左移动窗口 Move window to left between columns" { consume-or-expel-window-left; }
+    Mod+Shift+L hotkey-overlay-title="向右移动窗口 Move window to right between columns" { consume-or-expel-window-right; }
+
+    XF86TouchpadToggle { spawn-sh "~/.config/niri/scripts/toggle-touchpad.sh"; }
+    Mod+Ctrl+Shift+Alt+P hotkey-overlay-title="Toggle Touchpad" {
         spawn-sh "~/.config/niri/scripts/toggle-touchpad.sh";
     }
-
-    Mod+W hotkey-overlay-title="浏览器 Browser" { spawn "firefox"; }        
-
-    Mod+Alt+1 { move-column-to-workspace 1; }
-    Mod+Alt+2 { move-column-to-workspace 2; }
-    Mod+Alt+3 { move-column-to-workspace 3; }
-    Mod+Alt+4 { move-column-to-workspace 4; }
-    Mod+Alt+5 { move-column-to-workspace 5; }
-    Mod+Alt+6 { move-column-to-workspace 6; }
-    Mod+Alt+7 { move-column-to-workspace 7; }
-    Mod+Alt+8 { move-column-to-workspace 8; }
-    Mod+Alt+9 { move-column-to-workspace 9; }
-
-    Ctrl+Alt+Up { spawn "dms" "ipc" "call" "audio" "increment" "3"; }
-    Ctrl+Alt+Down { spawn "dms" "ipc" "call" "audio" "decrement" "3"; }
+    Mod+Ctrl+Shift+Alt+Up { spawn "dms" "ipc" "call" "audio" "increment" "3"; }
+    Mod+Ctrl+Shift+Alt+Down { spawn "dms" "ipc" "call" "audio" "decrement" "3"; }
 }
 
 include optional=true "touchpad-toggle.kdl"
@@ -62,13 +90,8 @@ window-rule {
 }
 
 output "eDP-1" {
-    mode "2560x1600@240.001"
-    scale 1.5
+    mode "2560x1600@240"
+    scale 1.4
     position x=0 y=0
 }
 
-output "HDMI-A-1" {
-    mode "2560x1440@59.951"
-    scale 1.0
-    position x=1707 y=0
-}
