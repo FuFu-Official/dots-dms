@@ -27,7 +27,7 @@ return {
     },
   },
   {
-    "AvengeMedia/base46",
+    "duxlabs-dev/base46",
     lazy = true,
     opts = {
       transparency = true,
