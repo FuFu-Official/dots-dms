@@ -26,7 +26,7 @@ return {
                 executable = "latexmk",
                 args = { "-xelatex", "-interaction=nonstopmode", "-synctex=1", "%f" },
                 forwardSearchAfter = true,
-                -- onSave = true,
+                onSave = true,
               },
               forwardSearch = {
                 executable = "zathura",

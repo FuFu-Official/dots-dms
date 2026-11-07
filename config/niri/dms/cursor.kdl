@@ -4,8 +4,8 @@
 // ! PLACE YOUR CUSTOM CONFIGURATION ELSEWHERE !
 
 cursor {
-    xcursor-theme "breeze_cursors"
-    xcursor-size 24
+    xcursor-theme "Aemeath"
+    xcursor-size 52
     hide-when-typing
     hide-after-inactive-ms 3000
 }

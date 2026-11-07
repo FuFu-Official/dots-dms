@@ -3,4 +3,4 @@ if status is-interactive
 end
 
 # Environment variable required by pi-web-ui to use the current openai package
-set -gx PI_WEB_SDK bundled
+# set -gx PI_WEB_SDK bundled

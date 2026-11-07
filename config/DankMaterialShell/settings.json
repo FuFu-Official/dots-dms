@@ -7,8 +7,8 @@
   "blurredWallpaperLayer": true,
   "networkPreference": "wifi",
   "cursorSettings": {
-    "theme": "breeze_cursors",
-    "size": 24,
+    "theme": "Aemeath",
+    "size": 52,
     "niri": {
       "hideWhenTyping": true,
       "hideAfterInactiveMs": 3000
@@ -214,5 +214,46 @@
   ],
   "dmsWindowsFloatingSeeded": [
     "niri"
-  ]
+  ],
+  "dashOptions": {
+    "wallpaper": {
+      "columns": 3,
+      "rows": 3
+    }
+  },
+  "avatarRing": "none",
+  "desktopWidgetInstances": [
+    {
+      "id": "dw_1793554331956_o42gmrt9a",
+      "widgetType": "systemMonitor",
+      "name": "System Monitor",
+      "enabled": false,
+      "config": {
+        "showHeader": true,
+        "transparency": 0.8,
+        "colorMode": "primary",
+        "customColor": "#ffffff",
+        "showCpu": true,
+        "showCpuGraph": true,
+        "showCpuTemp": true,
+        "showGpuTemp": false,
+        "gpuPciId": "",
+        "showMemory": true,
+        "showMemoryGraph": true,
+        "showNetwork": true,
+        "showNetworkGraph": true,
+        "showDisk": true,
+        "showTopProcesses": false,
+        "topProcessCount": 3,
+        "topProcessSortBy": "cpu",
+        "layoutMode": "auto",
+        "graphInterval": 60,
+        "displayPreferences": [
+          "all"
+        ]
+      }
+    }
+  ],
+  "desktopWidgetGroups": [],
+  "greeterPamExternallyManaged": false
 }

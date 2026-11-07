@@ -26,8 +26,11 @@ input {
 binds {
     Mod+T hotkey-overlay-title="终端 Terminal Kitty" { spawn "kitty"; }
     Mod+W hotkey-overlay-title="浏览器 Browser Firefox" { spawn "firefox"; }
-    Mod+E hotkey-overlay-title="文档管理器 Filemanager" { spawn-sh "thunar || env GSK_RENDERER=gl nautilus --new-window"; }
+    Mod+E hotkey-overlay-title="文档管理器 Filemanager" { spawn "dfiles" "open" "--new-window"; }
     Mod+Z hotkey-overlay-title="程序菜单 Applauncher" { spawn-sh "dms ipc call spotlight toggle || fuzzel"; }
+
+    Mod+F  hotkey-overlay-title="最大化 maximize" { maximize-column; }
+    Mod+Alt+F hotkey-overlay-title="全屏 fullscreen"  { fullscreen-window; }
 
     Mod+H     { focus-column-left; }
     Mod+J     { focus-window-down; }
@@ -98,6 +101,6 @@ output "eDP-1" {
 }
 
 output "HDMI-A-1" {
-    mode "2560x1440@74.971"
-    position x=0 y=-1440
+    // position x=0 y=-1440 // above eDP-1
+    position x=1829 y=0 // right of eDP-1
 }

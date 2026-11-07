@@ -1,0 +1,15 @@
+{
+  "lockfileVersion": 1,
+  "plugins": {
+    "dankKDEConnect": {
+      "repo": "https://github.com/AvengeMedia/dms-plugins",
+      "path": "DankKDEConnect",
+      "commit": "a55bb40da2f70640600a520ea05eac9c3540f1af"
+    },
+    "dankPomodoroTimer": {
+      "repo": "https://github.com/AvengeMedia/dms-plugins",
+      "path": "DankPomodoroTimer",
+      "commit": "a55bb40da2f70640600a520ea05eac9c3540f1af"
+    }
+  }
+}
