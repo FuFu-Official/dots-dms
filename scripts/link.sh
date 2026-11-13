@@ -31,3 +31,6 @@ ln -s "$DOTS_PREFIX/config/opencode/instructions" "$HOME/.config/opencode/instru
 
 rm -rf "$HOME/.config/starship.toml"
 ln -s "$DOTS_PREFIX/config/starship.toml" "$HOME/.config/starship.toml"
+
+rm -rf "$HOME/.pi/agent/AGENTS.md"
+ln -s "$DOTS_PREFIX/config/AGENTS/AGENTS.md" "$HOME/.pi/agent/AGENTS.md"

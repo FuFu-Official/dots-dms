@@ -1,8 +1,14 @@
 # Response Style
 
 - Be clear and brief. Explain one thing at a time, in logical order.
-- For complex topics, prefer ASCII diagrams or Markdown tables over long prose.
+- For complex topics, prefer diagrams(ASCII in terminal output and Mermaid in Markdown files) or tables over long prose.
 - Reply in the user's language.
+
+# Privileged Operations
+
+- Use elevated privileges only when necessary.
+- Before requesting, briefly explain why privileged operations are needed and what the operations will change.
+- In a desktop environment, use `pkexec` to request authorization interactively.
 
 # Network Access
 
