@@ -32,10 +32,10 @@ binds {
     Mod+F  hotkey-overlay-title="最大化 maximize" { maximize-column; }
     Mod+Alt+F hotkey-overlay-title="全屏 fullscreen"  { fullscreen-window; }
 
-    Mod+H     { focus-column-left; }
-    Mod+J     { focus-window-down; }
-    Mod+K     { focus-window-up; }
-    Mod+L     { focus-column-right; }
+    Mod+H { focus-column-left; }
+    Mod+J { focus-window-down; }
+    Mod+K { focus-window-up; }
+    Mod+L { focus-column-right; }
 
     Mod+1 { focus-workspace 1; }
     Mod+2 { focus-workspace 2; }
@@ -69,10 +69,36 @@ binds {
     Mod+Shift+H hotkey-overlay-title="向左移动窗口 Move window to left between columns" { consume-or-expel-window-left; }
     Mod+Shift+L hotkey-overlay-title="向右移动窗口 Move window to right between columns" { consume-or-expel-window-right; }
 
+    Mod+Shift+A hotkey-overlay-title="向左聚焦显示器 Focus left monitor" { focus-monitor-left; }
+    Mod+Shift+D hotkey-overlay-title="向右聚焦显示器 Focus right monitor" { focus-monitor-right; }
+    Mod+Shift+W hotkey-overlay-title="向上聚焦显示器 Focus monitor above" { focus-monitor-up; }
+    Mod+Shift+S hotkey-overlay-title="向下聚焦显示器 Focus monitor below" { focus-monitor-down; }
+
+    Mod+Shift+Ctrl+A hotkey-overlay-title="移动窗口列到左侧显示器 Move column to left monitor" { move-column-to-monitor-left; }
+    Mod+Shift+Ctrl+S hotkey-overlay-title="移动窗口列到下方显示器 Move column to the monitor below" { move-column-to-monitor-down; }
+    Mod+Shift+Ctrl+W hotkey-overlay-title="移动窗口列到上方显示器 Move column to the monitor above" { move-column-to-monitor-up; }
+    Mod+Shift+Ctrl+D hotkey-overlay-title="移动窗口列到右侧显示器 Move column to right monitor" { move-column-to-monitor-right; }
+
+    Mod+Shift+Alt+W hotkey-overlay-title="移动工作区到上方显示器 Move workspace to the monitor above" { move-workspace-to-monitor-up; }
+    Mod+Shift+Alt+S hotkey-overlay-title="移动工作区到下方显示器 Move workspace to the monitor below" { move-workspace-to-monitor-down; }
+    Mod+Shift+Alt+D hotkey-overlay-title="移动工作区到右侧显示器 Move workspace to right monitor" { move-workspace-to-monitor-right; }
+    Mod+Shift+Alt+A hotkey-overlay-title="移动工作区到左侧显示器 Move workspace to left monitor" { move-workspace-to-monitor-left; }
+
+    // 切换浮动模式
+    Mod+V   hotkey-overlay-title="切换浮动 Toggle floating"    { toggle-window-floating; }
+    // 在浮动模式和非浮动模式之间切换聚焦
+    Mod+Shift+V hotkey-overlay-title="切换浮动聚焦 Switch focus between floating and tiling" { switch-focus-between-floating-and-tiling; }
+
+    Mod+Alt+A  hotkey-overlay-title="选取区域截图 Select screenshot"  {spawn-sh "niri msg action screenshot --show-pointer false && pkill -f -USR1 screenshot-sound.sh";}
+    Mod+Alt+Ctrl+A  hotkey-overlay-title="截取聚焦窗口 Focus-window screenshot" { spawn-sh "niri msg action screenshot-window && pkill -f -USR1 screenshot-sound.sh"; }
+    Mod+Alt+Ctrl+Shift+A  hotkey-overlay-title="截取显示器 Monitor screenshot" { spawn-sh "niri msg action screenshot-screen --show-pointer false && pkill -f -USR1 screenshot-sound.sh"; }
+    Mod+Alt+S  hotkey-overlay-title="截图后按下此键进行编辑 Edit the image after screenshot" { spawn-sh "wl-paste | satty -f -";}
+
     XF86TouchpadToggle { spawn-sh "~/.config/niri/scripts/toggle-touchpad.sh"; }
     Mod+Ctrl+Shift+Alt+P hotkey-overlay-title="Toggle Touchpad" {
         spawn-sh "~/.config/niri/scripts/toggle-touchpad.sh";
     }
+
     Mod+Ctrl+Shift+Alt+Up { spawn "dms" "ipc" "call" "audio" "increment" "3"; }
     Mod+Ctrl+Shift+Alt+Down { spawn "dms" "ipc" "call" "audio" "decrement" "3"; }
 }
@@ -101,6 +127,7 @@ output "eDP-1" {
 }
 
 output "HDMI-A-1" {
-    // position x=0 y=-1440 // above eDP-1
-    position x=1829 y=0 // right of eDP-1
+    mode "2560x1440@74.971"
+    position x=0 y=-1440 // above eDP-1
+    // position x=1829 y=0 // right of eDP-1
 }
