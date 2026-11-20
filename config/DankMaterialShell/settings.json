@@ -8,7 +8,7 @@
   "networkPreference": "wifi",
   "cursorSettings": {
     "theme": "Aemeath",
-    "size": 52,
+    "size": 64,
     "niri": {
       "hideWhenTyping": true,
       "hideAfterInactiveMs": 3000
@@ -151,6 +151,7 @@
       "showOnLastDisplay": true,
       "position": 1,
       "mode": "compact",
+      "middleClickAction": "close",
       "taskbarAlign": "center",
       "widgetExpansion": "popout",
       "iconSize": 40,

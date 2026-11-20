@@ -5,7 +5,7 @@
 
 cursor {
     xcursor-theme "Aemeath"
-    xcursor-size 52
+    xcursor-size 64
     hide-when-typing
     hide-after-inactive-ms 3000
 }
