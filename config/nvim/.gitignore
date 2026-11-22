@@ -14,12 +14,12 @@
 !*.lua
 !*.vim
 !*.sh
+!*.toml
+!LICENSE
 !lua
 !lua/**
 !scripts
 !scripts/**
-!*.toml
-!LICENSE
 !dots
 !dots/**
 !colors
