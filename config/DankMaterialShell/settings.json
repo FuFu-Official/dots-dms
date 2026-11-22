@@ -97,8 +97,8 @@
       "bottomGap": 0,
       "transparency": 1,
       "widgetTransparency": 1,
-      "squareCorners": false,
-      "noBackground": false,
+      "squareCorners": true,
+      "noBackground": true,
       "gothCornersEnabled": false,
       "gothCornerRadiusOverride": false,
       "gothCornerRadiusValue": 12,
@@ -113,16 +113,23 @@
       "visible": true,
       "popupGapsAuto": true,
       "popupGapsManual": 4,
-      "maximizeWidgetIcons": false,
+      "maximizeWidgetIcons": true,
       "shadowIntensity": 0,
       "widgetPadding": 8,
       "widgetOutlineEnabled": false,
-      "attachToScreenEdge": true,
+      "attachToScreenEdge": false,
       "useOverlayLayer": false,
       "clickThrough": false,
       "barInsetPadding": 4,
       "followInterfaceStyle": true,
-      "widgetFollowInterfaceStyle": true
+      "widgetFollowInterfaceStyle": true,
+      "middleClickAction": "control-center",
+      "rightClickAction": "settings",
+      "clickActionFollowMouse": true,
+      "surfaceColor": "default",
+      "iconScale": 1,
+      "barLengthPadding": 0,
+      "maximizeWidgetText": true
     }
   ],
   "builtInPluginSettings": {
@@ -256,5 +263,18 @@
     }
   ],
   "desktopWidgetGroups": [],
-  "greeterPamExternallyManaged": false
+  "greeterPamExternallyManaged": false,
+  "useAutoLocation": true,
+  "useFahrenheit": false,
+  "windSpeedUnit": "kmh",
+  "weatherProviders": [
+    {
+      "id": "openmeteo",
+      "enabled": true
+    },
+    {
+      "id": "metno",
+      "enabled": false
+    }
+  ]
 }

@@ -127,6 +127,7 @@ output "eDP-1" {
 }
 
 output "HDMI-A-1" {
+    // mode "2560x1440@143.967"
     mode "2560x1440@74.971"
     position x=0 y=-1440 // above eDP-1
     // position x=1829 y=0 // right of eDP-1
