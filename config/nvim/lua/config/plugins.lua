@@ -42,6 +42,7 @@ local plugins = {
   "https://github.com/duxlabs-dev/base46",
 
   -- Interface, navigation, and editing helpers.
+  "https://github.com/mikesmithgh/kitty-scrollback.nvim",
   { src = "https://github.com/nvim-neo-tree/neo-tree.nvim", version = vim.version.range "*" },
   "https://github.com/hedyhli/outline.nvim",
   "https://github.com/lukas-reineke/indent-blankline.nvim",
@@ -70,6 +71,8 @@ local plugins = {
   { src = "https://github.com/nvim-treesitter/nvim-treesitter-textobjects", version = "main" },
 }
 vim.pack.add(plugins)
+
+require("kitty-scrollback").setup()
 
 local keymaps = require "config.keymaps"
 
